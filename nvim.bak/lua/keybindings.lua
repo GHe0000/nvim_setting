@@ -28,7 +28,7 @@ map("n", "<C-z>", ":undo<CR>", opt)
 map('n', '<S-m>', ':NvimTreeToggle<CR>', opt)
 
 map('t', '<Esc>', '<C-\\><C-N>', opt)
-map('n', '<S-t>', ':split term://CMD<CR>', opt)
+map('n', '<S-t>', ':split term://POWERSHELL<CR>', opt)
 
 map('v', '<', '<gv', opt)
 map('v', '>', '>gv', opt)

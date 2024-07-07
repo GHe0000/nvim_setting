@@ -2,6 +2,7 @@
     "suggest.noselect":true,
     "pyright.inlayHints.functionReturnTypes" : false,
     "pyright.inlayHints.variableTypes": false,
+    "pyright.inlayHints.parameterTypes":false,
     "python.linting.enabled": false,
     "pyright.disableDiagnostics":true,
     "clangd.disableDiagnostics":true,
@@ -32,5 +33,6 @@
         "snippet": "\ue60b",
         "typeParameter": "\uf728",
         "default": " "
-    }
+    },
+    "typst-lsp.exportPdf": "never"
 }

@@ -31,6 +31,8 @@ set conceallevel=2
 let g:tex_conceal='abdmg'
 let g:vimtex_syntax_conceal = {"math_bounds":0}
 
+set ttyfast
+set lazyredraw
 
 let g:vimtex_imaps_enabled = 1
 let g:vimtex_imaps_in_vimtex = 1
@@ -40,4 +42,7 @@ let g:vimtex_imaps_leader = '`'
 autocmd FileType tex setlocal wrap ts=2 softtabstop=2 shiftwidth=2
 autocmd FileType c,cpp setlocal ts=2 softtabstop=2 shiftwidth=2
 
-autocmd VimEnter * IMSToggle
+"autocmd VimEnter * IMSToggle
+
+
+set fillchars=eob:\ 

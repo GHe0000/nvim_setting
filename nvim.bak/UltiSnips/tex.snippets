@@ -89,13 +89,13 @@ endsnippet
 snippet dm "Math" wA
 \[
 ${1:${VISUAL}}
-.\] $0
+\] $0
 endsnippet
 
 snippet ali "Align" bA
 \begin{align*}
 	${1:${VISUAL}}
-.\end{align*}
+\end{align*}
 endsnippet
 
 
@@ -441,10 +441,6 @@ snippet inn "in " iA
 \in 
 endsnippet
 
-snippet NN "n" iA
-\N
-endsnippet
-
 snippet Nn "cap" iA
 \cap 
 endsnippet
@@ -460,23 +456,6 @@ endsnippet
 snippet nnn "bigcap" iA
 \bigcap_{${1:i \in ${2: I}}} $0
 endsnippet
-
-snippet OO "emptyset" iA
-\O
-endsnippet
-
-snippet RR "real" iA
-\R
-endsnippet
-
-snippet QQ "Q" iA
-\Q
-endsnippet
-
-snippet ZZ "Z" iA
-\Z
-endsnippet
-
 snippet <! "normal" iA
 \triangleleft 
 endsnippet
@@ -547,17 +526,47 @@ Let $\Omega \subset \C$ be open.
 endsnippet
 
 
-snippet HH "H" iA
-\mathbb{H}
+
+# 集合
+
+snippet OO "emptyset" iA
+\mathbb{O}
+endsnippet
+
+snippet RR "real" iA
+\mathbb{R}
+endsnippet
+
+snippet QQ "Q" iA
+\mathbb{Q}
+endsnippet
+
+snippet ZZ "Z" iA
+\mathbb{Z}
+endsnippet
+
+snippet NN "n" iA
+\mathbb{N}
+endsnippet
+
+snippet II "I" iA
+\mathbb{I}
 endsnippet
 
 snippet DD "D" iA
 \mathbb{D}
 endsnippet
 
+# 希腊字母合集
+
 context "math()"
 snippet @a "text" iA
 \alpha
+endsnippet
+
+context "math()"
+snippet @A "text" iA
+\Alpha
 endsnippet
 
 context "math()"
@@ -566,18 +575,102 @@ snippet @b "text" iA
 endsnippet
 
 context "math()"
+snippet @B "text" iA
+\Beta
+endsnippet
+
+context "math()"
 snippet @g "text" iA
 \gamma
+endsnippet
+
+context "math()"
+snippet @G "text" iA
+\Gamma
+endsnippet
+
+context "math()"
+snippet @e "text" iA
+\varepsilon
+endsnippet
+context "math()"
+
+snippet @E "text" iA
+\Epsilon
+endsnippet
+
+context "math()"
+snippet @z "text" iA
+\zeta
+endsnippet
+
+context "math()"
+snippet @Z "text" iA
+\Zeta
+endsnippet
+
+context "math()"
+snippet @t "text" iA
+\theta
+endsnippet
+
+context "math()"
+snippet @T "text" iA
+\Theta
+endsnippet
+
+context "math()"
+snippet @l "text" iA
+\lambda
+endsnippet
+
+context "math()"
+snippet @L "text" iA
+\Lambda
+endsnippet
+
+context "math()"
+snippet @k "text" iA
+\kappa
+endsnippet
+
+context "math()"
+snippet @K "text" iA
+\Kappa
+endsnippet
+
+context "math()"
+snippet @m "text" iA
+\mu
+endsnippet
+
+context "math()"
+snippet @n "text" iA
+\nu
+endsnippet
+
+context "math()"
+snippet @o "text" iA
+\omega
+endsnippet
+
+context "math()"
+snippet @O "text" iA
+\Omega
+endsnippet
+
+context "math()"
+snippet @s "text" iA
+\sigma
+endsnippet
+
+context "math()"
+snippet @S "text" iA
+\Sigma
 endsnippet
 
 context "math()"
 snippet @d "text" iA
 \delta
 endsnippet
-
-
-
-
-
-
 # vim:ft=snippets
