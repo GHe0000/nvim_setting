@@ -31,9 +31,9 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 
 -- 分屏快捷键
 -- 创建 and 关闭分屏
-vim.keymap.set("n", "<S-v>", ":vsp<CR>")
-vim.keymap.set("n", "<S-h>", ":sp<CR>")
-vim.keymap.set("n", "<S-c>", "<C-w>c")
+--vim.keymap.set("n", "<S-v>", ":vsp<CR>")
+--vim.keymap.set("n", "<S-h>", ":sp<CR>")
+--vim.keymap.set("n", "<S-c>", "<C-w>c")
 
 -- 分屏移动
 vim.keymap.set("n", "<S-Left>", "<C-w>h")

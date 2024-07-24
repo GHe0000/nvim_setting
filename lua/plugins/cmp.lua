@@ -15,6 +15,9 @@ return {
           end
           return 'make install_jsregexp'
         end)(),
+        config = function ()
+          require("luasnip.loaders.from_lua").load({paths = vim.fn.stdpath("config").."\\luasnippets"})
+        end,
         dependencies = {
           {
              'rafamadriz/friendly-snippets',
@@ -65,8 +68,6 @@ return {
           --  This will expand snippets if the LSP sent a snippet.
           --['<C-y>'] = cmp.mapping.confirm { select = true },
 
-          -- If you prefer more traditional completion keymaps,
-          -- you can uncomment the following lines
           ['<CR>'] = cmp.mapping.confirm { select = true },
           ['<Tab>'] = cmp.mapping.select_next_item(),
           ['<S-Tab>'] = cmp.mapping.select_prev_item(),

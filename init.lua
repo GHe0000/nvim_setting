@@ -1,4 +1,4 @@
---  NOTE: 必须在加载时首先设置，否则会出现问题
+-- NOTE: 必须在加载时首先设置，否则会出现问题
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -26,3 +26,7 @@ require("lazy-bootstrap")
 require("lazy-plugins")
 
 require("ginit")
+
+-- NOTE: 暂时在主文件中配置，之后考虑移到 cmp 配置中
+
+-- require("luasnip.loaders.from_lua").load({paths = vim.fn.stdpath("config").."\\luasnippets"})

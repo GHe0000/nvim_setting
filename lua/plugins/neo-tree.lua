@@ -14,6 +14,11 @@ return {
 		{ "\\", ":Neotree reveal<CR>", { desc = "NeoTree reveal" } },
 	},
 	opts = {
+		window = {
+			position = "left",
+			width = 20, -- 设置文件窗口占用的大小
+		},
+
 		filesystem = {
 			window = {
 				mappings = {
