@@ -23,26 +23,19 @@ return {
 
 		-- Add your own debuggers here
 		"leoluz/nvim-dap-go",
+		"julianolf/nvim-dap-lldb",
 	},
 	config = function()
 		local dap = require("dap")
 		local dapui = require("dapui")
 
 		require("mason-nvim-dap").setup({
-			-- Makes a best effort to setup the various debuggers with
-			-- reasonable debug configurations
 			automatic_installation = false,
 
 			-- You can provide additional configuration to the handlers,
 			-- see mason-nvim-dap README for more information
 			handlers = {},
-
-			-- You'll need to check that you have the required things installed
-			-- online, please don't ask me how to install them :)
-			ensure_installed = {
-				-- Update this to ensure that you have the debuggers for the langs you want
-				"delve",
-			},
+			ensure_installed = {},
 		})
 
 		-- Basic debugging keymaps, feel free to change to your liking!
@@ -90,6 +83,31 @@ return {
 				-- On Windows delve must be run attached or it crashes.
 				-- See https://github.com/leoluz/nvim-dap-go/blob/main/README.md#configuring
 				detached = vim.fn.has("win32") == 0,
+			},
+		})
+
+		require("dap-lldb").setup({
+			configurations = {
+				-- C lang configurations
+				c = {
+					{
+						name = "Launch debugger",
+						type = "lldb",
+						request = "launch",
+						cwd = "${workspaceFolder}",
+						program = function()
+							-- Build with debug symbols
+							local out = vim.fn.system({"make", "debug"})
+							-- Check for errors
+							if vim.v.shell_error ~= 0 then
+								vim.notify(out, vim.log.levels.ERROR)
+								return nil
+							end
+							-- Return path to the debuggable program
+							return "path/to/executable"
+						end,
+					},
+				},
 			},
 		})
 	end,
