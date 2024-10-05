@@ -42,6 +42,7 @@ require("lazy").setup({
 
 	-- Typst 相关
 	require("plugins.typst-preview"),
+	-- require("plugins.typst"),
 
 	-- LaTeX 相关
 	require("plugins.latex"),

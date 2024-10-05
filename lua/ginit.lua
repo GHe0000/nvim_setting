@@ -8,6 +8,8 @@ if vim.g.neovide then
 	vim.g.neovide_cursor_animate_in_insert_mode = false
 	vim.g.neovide_position_animation_length = 0.15
 	vim.g.neovide_scroll_animation_length = 0.3
+	vim.g.neovide_refresh_rate = 30 -- 刷新率
+	vim.g.neovide_refresh_rate_idle = 5 -- 空闲刷新率
 end
 
 
