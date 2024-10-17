@@ -217,7 +217,8 @@ return {
       --
       --  You can press `g?` for help in this menu.
       require('mason').setup()
-
+      -- 由于 Mason 无法管理 aarch64 下的 clangd，因此需要手动添加
+      require'lspconfig'.clangd.setup{}
       -- You can add other tools here that you want Mason to install
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
