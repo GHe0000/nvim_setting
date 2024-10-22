@@ -35,7 +35,7 @@
   "tex-conceal.vim": { "branch": "master", "commit": "93ae39d9222b0892684d02324b85ee9d3647bf8e" },
   "todo-comments.nvim": { "branch": "main", "commit": "ae0a2afb47cf7395dc400e5dc4e05274bf4fb9e0" },
   "toggleterm.nvim": { "branch": "main", "commit": "137d06fb103952a0fb567882bb8527e2f92d327d" },
-  "typst.vim": { "branch": "main", "commit": "4d18ced62599ffe5b3c0e5e49566d5456121bc02" },
+  "typst-preview.nvim": { "branch": "master", "commit": "0354cc1a7a5174a2e69cdc21c4db9a3ee18bb20a" },
   "vim-sleuth": { "branch": "master", "commit": "be69bff86754b1aa5adcbb527d7fcd1635a84080" },
   "vim-wakatime": { "branch": "master", "commit": "f699e30ca1ba0c7f316847316fd0ba19d3ee51c1" },
   "vimtex": { "branch": "master", "commit": "fcbaf66887bd19f5d973406848cf2a5ac46bd65e" },
