@@ -202,7 +202,7 @@ return {
             },
           },
         },
-        typst_lsp = {
+        tinymist = {
           settings = {
             exportPdf = "never",
           },
