@@ -41,7 +41,8 @@ require("lazy").setup({
 	require("plugins.wakatime"),
 
 	-- Typst 相关
-	require("plugins.typst-preview"),
+	require("plugins.typst-preview"), 
+  -- Lsp 中已经集成相关功能
 	-- require("plugins.typst"),
 
 	-- LaTeX 相关
