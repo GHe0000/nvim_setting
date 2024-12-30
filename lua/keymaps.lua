@@ -41,10 +41,10 @@ vim.keymap.set("n", "<S-Down>" , "<C-w>j",{ desc = "Move focus to the right wind
 vim.keymap.set("n", "<S-Up>"   , "<C-w>k",{ desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<S-Right>", "<C-w>l",{ desc = "Move focus to the upper window" })
 
-vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move focus to the upper window" })
+-- vim.keymap.set("n", "<S-h>", "<C-w>h", { desc = "Move focus to the left window" })
+-- vim.keymap.set("n", "<S-l>", "<C-w>l", { desc = "Move focus to the right window" })
+-- vim.keymap.set("n", "<S-j>", "<C-w>j", { desc = "Move focus to the lower window" })
+-- vim.keymap.set("n", "<S-k>", "<C-w>k", { desc = "Move focus to the upper window" })
 
 -- 分屏大小设置
 vim.keymap.set("n", "<C-Right>", ":vertical resize +10<CR>")
