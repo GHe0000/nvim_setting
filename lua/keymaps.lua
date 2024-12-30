@@ -36,10 +36,15 @@ vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" }
 --vim.keymap.set("n", "<S-c>", "<C-w>c")
 
 -- 分屏移动
-vim.keymap.set("n", "<S-Left>", "<C-w>h")
-vim.keymap.set("n", "<S-Down>", "<C-w>j")
-vim.keymap.set("n", "<S-Up>", "<C-w>k")
-vim.keymap.set("n", "<S-Right>", "<C-w>l")
+vim.keymap.set("n", "<S-Left>" , "<C-w>h",{ desc = "Move focus to the left window" })
+vim.keymap.set("n", "<S-Down>" , "<C-w>j",{ desc = "Move focus to the right window" })
+vim.keymap.set("n", "<S-Up>"   , "<C-w>k",{ desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<S-Right>", "<C-w>l",{ desc = "Move focus to the upper window" })
+
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move focus to the left window" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move focus to the right window" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move focus to the lower window" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move focus to the upper window" })
 
 -- 分屏大小设置
 vim.keymap.set("n", "<C-Right>", ":vertical resize +10<CR>")
@@ -56,12 +61,6 @@ vim.keymap.set("n", "<A-Down>", "10j")
 
 -- 粘贴
 vim.keymap.set("i", "<C-v>", [[<Esc>pi]])
-
---  See `:help wincmd` for a list of all window commands
-vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
-vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
-vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
