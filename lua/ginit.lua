@@ -10,6 +10,10 @@ if vim.g.neovide then
 	vim.g.neovide_scroll_animation_length = 0.3
 	vim.g.neovide_refresh_rate = 30 -- 刷新率
 	vim.g.neovide_refresh_rate_idle = 5 -- 空闲刷新率
+else
+	vim.cmd [[
+		highlight Normal guibg=None
+	]]
 end
 
 

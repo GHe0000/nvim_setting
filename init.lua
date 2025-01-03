@@ -27,9 +27,9 @@ require("lazy-plugins")
 
 require("ginit")
 
-vim.cmd [[
-  highlight Normal guibg=None
-]]
+-- vim.cmd [[
+--   highlight Normal guibg=None
+-- ]]
 
 -- NOTE: 暂时在主文件中配置，之后考虑移到 cmp 配置中
 
