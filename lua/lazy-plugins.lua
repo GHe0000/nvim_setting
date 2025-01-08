@@ -27,7 +27,7 @@ require("lazy").setup({
 	require("plugins.cmp"),
 
 	-- 自动输入法切换
-	-- require("plugins.neuims"),
+	require("plugins.neuims"),
 
 	-- 终端
 	require("plugins.toggleterm"),
