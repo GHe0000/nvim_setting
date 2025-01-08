@@ -16,5 +16,3 @@ else
 		highlight Normal guibg=None
 	]]
 end
-
-
