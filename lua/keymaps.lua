@@ -47,10 +47,11 @@ vim.keymap.set("n", "<S-Right>", "<C-w>l",{ desc = "Move focus to the upper wind
 -- vim.keymap.set("n", "<S-k>", "<C-w>k", { desc = "Move focus to the upper window" })
 
 -- 分屏大小设置
-vim.keymap.set("n", "<C-Right>", ":vertical resize +10<CR>")
-vim.keymap.set("n", "<C-Left>", ":vertical resize -10<CR>")
-vim.keymap.set("n", "<C-Up>", ":resize +10<CR>")
-vim.keymap.set("n", "<C-Down>", ":resize -10<CR>")
+-- 用的不多，且占用了 AI 的快捷键
+-- vim.keymap.set("n", "<C-Right>", ":vertical resize +10<CR>")
+-- vim.keymap.set("n", "<C-Left>", ":vertical resize -10<CR>")
+-- vim.keymap.set("n", "<C-Up>", ":resize +10<CR>")
+-- vim.keymap.set("n", "<C-Down>", ":resize -10<CR>")
 
 -- Alt 快速移动
 vim.keymap.set("n", "<A-k>", "10k")

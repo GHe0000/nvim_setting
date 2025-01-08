@@ -28,7 +28,7 @@ require("lazy").setup({
 	require("plugins.cmp"),
 
 	-- 自动输入法切换
-	require("plugins.neuims"),
+	-- require("plugins.neuims"),
 
 	-- 终端
 	require("plugins.toggleterm"),
@@ -40,8 +40,11 @@ require("lazy").setup({
 	-- 时长统计
 	require("plugins.wakatime"),
 
+  -- AI 补全
+  require("plugins.fittencode"),
+
 	-- Typst 相关
-	require("plugins.typst-preview"), 
+	require("plugins.typst-preview"),
   -- Lsp 中已经集成相关功能
 	-- require("plugins.typst"),
 
