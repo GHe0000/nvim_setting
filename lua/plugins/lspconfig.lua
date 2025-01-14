@@ -217,9 +217,9 @@ return {
       --
       --  You can press `g?` for help in this menu.
       require('mason').setup()
-
-      -- You can add other tools here that you want Mason to install
-      -- for you, so that they are available from within Neovim.
+      -- 手动安装的 LSP 设置
+      -- 由于 Windows 下 Mason 自动安装的 clangd 配置麻烦，因此这里手动配置，使用 MSYS2 提供的 clangd
+      require'lspconfig'.clangd.setup{}
       local ensure_installed = vim.tbl_keys(servers or {})
       -- Mason 必须安装的插件
       vim.list_extend(ensure_installed, {
