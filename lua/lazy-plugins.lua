@@ -16,6 +16,8 @@ require("lazy").setup({
 
 	require("plugins.gitsigns"),
 
+  require("plugins.leap"),
+
 	require("plugins.which-key"),
 
 	require("plugins.telescope"),
@@ -33,7 +35,6 @@ require("lazy").setup({
 	require("plugins.toggleterm"),
 
 	-- 配色
-	--require("plugins/tokyonight"),
 	require("plugins.gruvbox"),
 
 	-- 时长统计
@@ -56,7 +57,6 @@ require("lazy").setup({
 	require("plugins.mini"),
 
 	require("plugins.treesitter"),
-
 	require("plugins.debug"),
 	require("plugins.autopairs"),
 	require("plugins.neo-tree"),

@@ -8,11 +8,11 @@ return {
         use_default_keymaps = false,
         keymaps = {
           inline = {
-            ['<C-y>'] = 'accept_all_suggestions',
-            ['<C-Down>'] = 'accept_line',
-            ['<C-Right>'] = 'accept_word',
-            ['<C-Up>'] = 'revoke_line',
-            ['<C-Left>'] = 'revoke_word',
+            ['<A-y>'] = 'accept_all_suggestions',
+            ['<A-k>'] = 'accept_line',
+            ['<A-l>'] = 'accept_word',
+            ['<A-i>'] = 'revoke_line',
+            ['<A-j>'] = 'revoke_word',
             ['<A-\\>'] = 'triggering_completion',
           },
           chat = {
