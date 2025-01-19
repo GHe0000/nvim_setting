@@ -18,6 +18,8 @@ require("lazy").setup({
 
 	require("plugins.which-key"),
 
+  require("plugins.leap"),
+
 	require("plugins.telescope"),
 
 	require("plugins.lspconfig"),
