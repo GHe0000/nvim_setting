@@ -9,10 +9,10 @@ return {
         keymaps = {
           inline = {
             ['<A-y>'] = 'accept_all_suggestions',
-            ['<A-k>'] = 'accept_line',
-            ['<A-l>'] = 'accept_word',
-            ['<A-i>'] = 'revoke_line',
-            ['<A-j>'] = 'revoke_word',
+            ['<A-m>'] = 'accept_line',
+            ['<A-n>'] = 'accept_word',
+            ['<A-S-m>'] = 'revoke_line',
+            ['<A-S-n>'] = 'revoke_word',
             ['<A-\\>'] = 'triggering_completion',
           },
           chat = {
