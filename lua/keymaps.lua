@@ -55,6 +55,12 @@ vim.keymap.set("n", "<A-j>", "10j")
 
 vim.keymap.set("n", "<A-Up>", "10k")
 vim.keymap.set("n", "<A-Down>", "10j")
+--
+-- vim.keymap.set('i', '<A-i>', '<Up>', { noremap = true, silent = true })
+-- vim.keymap.set('i', '<A-k>', '<Down>', { noremap = true, silent = true })
+-- vim.keymap.set('i', '<A-j>', '<Left>', { noremap = true, silent = true })
+-- vim.keymap.set('i', '<A-l>', '<Right>', { noremap = true, silent = true })
+--
 
 -- 粘贴
 vim.keymap.set("i", "<C-v>", [[<Esc>pi]])

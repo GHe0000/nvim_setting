@@ -52,7 +52,10 @@ require("lazy").setup({
 	-- LaTeX 相关
 	require("plugins.latex"),
 
-	require("plugins.todo-comments"),
+  -- Markdown 相关
+  require("plugins.markdown-preview"),
+
+  require("plugins.todo-comments"),
 
 	-- 底部信息栏
 	require("plugins.mini"),
