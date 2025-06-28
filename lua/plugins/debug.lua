@@ -77,38 +77,38 @@ return {
 		dap.listeners.before.event_terminated["dapui_config"] = dapui.close
 		dap.listeners.before.event_exited["dapui_config"] = dapui.close
 
-		-- Install golang specific config
-		require("dap-go").setup({
-			delve = {
-				-- On Windows delve must be run attached or it crashes.
-				-- See https://github.com/leoluz/nvim-dap-go/blob/main/README.md#configuring
-				detached = vim.fn.has("win32") == 0,
-			},
-		})
-
-		require("dap-lldb").setup({
-			configurations = {
-				-- C lang configurations
-				c = {
-					{
-						name = "Launch debugger",
-						type = "lldb",
-						request = "launch",
-						cwd = "${workspaceFolder}",
-						program = function()
-							-- Build with debug symbols
-							local out = vim.fn.system({"make", "debug"})
-							-- Check for errors
-							if vim.v.shell_error ~= 0 then
-								vim.notify(out, vim.log.levels.ERROR)
-								return nil
-							end
-							-- Return path to the debuggable program
-							return "path/to/executable"
-						end,
-					},
-				},
-			},
-		})
+		-- -- Install golang specific config
+		-- require("dap-go").setup({
+		-- 	delve = {
+		-- 		-- On Windows delve must be run attached or it crashes.
+		-- 		-- See https://github.com/leoluz/nvim-dap-go/blob/main/README.md#configuring
+		-- 		detached = vim.fn.has("win32") == 0,
+		-- 	},
+		-- })
+		--
+		-- require("dap-lldb").setup({
+		-- 	configurations = {
+		-- 		-- C lang configurations
+		-- 		c = {
+		-- 			{
+		-- 				name = "Launch debugger",
+		-- 				type = "lldb",
+		-- 				request = "launch",
+		-- 				cwd = "${workspaceFolder}",
+		-- 				program = function()
+		-- 					-- Build with debug symbols
+		-- 					local out = vim.fn.system({"make", "debug"})
+		-- 					-- Check for errors
+		-- 					if vim.v.shell_error ~= 0 then
+		-- 						vim.notify(out, vim.log.levels.ERROR)
+		-- 						return nil
+		-- 					end
+		-- 					-- Return path to the debuggable program
+		-- 					return "path/to/executable"
+		-- 				end,
+		-- 			},
+		-- 		},
+		-- 	},
+		-- })
 	end,
 }
