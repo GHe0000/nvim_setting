@@ -207,7 +207,19 @@ return {
             exportPdf = "never",
           },
         },
-
+        pylsp = {
+          settings = {
+            pylsp = {
+              plugins = {
+                pycodestyle = { enabled = false },
+                flake8 = { enabled = false },
+                pylint = { enabled = false },
+                pyflakes = { enabled = true },
+                mccabe = { enabled = false }
+              }
+            }
+          }
+        },
       }
 
       -- Ensure the servers and tools above are installed
