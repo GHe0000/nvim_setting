@@ -16,7 +16,7 @@ require("lazy").setup({
 
 	require("plugins.gitsigns"),
 
-  require("plugins.leap"),
+	require("plugins.leap"),
 
 	require("plugins.which-key"),
 
@@ -40,12 +40,12 @@ require("lazy").setup({
 	-- 时长统计
 	require("plugins.wakatime"),
 
-  -- AI 补全
-  require("plugins.fittencode"),
+	-- AI 补全
+	require("plugins.fittencode"),
 
 	-- Typst 相关
 	require("plugins.typst-preview"),
-  -- Lsp 中已经集成相关功能
+	-- Lsp 中已经集成相关功能
 	-- require("plugins.typst"),
 
 	-- LaTeX 相关
@@ -60,6 +60,14 @@ require("lazy").setup({
 	require("plugins.debug"),
 	require("plugins.autopairs"),
 	require("plugins.neo-tree"),
+
+	-- 图像支持
+	-- require("plugins.image"),
+
+
+  -- Jupyter Notebook
+  -- require("plugins.jupyter"),
+  -- require("plugins.jupytext"),
 
 }, {
 	ui = {
