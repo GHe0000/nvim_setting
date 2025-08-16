@@ -6,6 +6,10 @@ vim.g.maplocalleader = " "
 -- 使用 Nerd Font 字体
 vim.g.have_nerd_font = true
 
+-- Windows 下手动设置 Py 路径
+vim.g.python3_host_prog = 'C:/Users/GHe/.local/share/mamba/envs/main/python.exe'
+-- vim.g.python3_host_prog = 'D:/Software/miniforge3/python.exe'
+
 -- Windows 下默认终端设置为 Powershell
 local powershell_options = {
 	shell = vim.fn.executable("pwsh") == 1 and "pwsh" or "powershell",

@@ -126,31 +126,24 @@ return {
           },
         },
 
-        tinymist = {
-          settings = {
-            exportPdf = "never",
-          },
-        },
-        
         pylsp = {
           settings = {
             pylsp = {
               plugins = {
                 pycodestyle = { enabled = false },
-                flake8 = { enabled = false },
+                pydocstyle = { enabled = false },
+                mccabe = { enabled = false },
                 pylint = { enabled = false },
-                pyflakes = { enabled = true },
-                mccabe = { enabled = false }
-              }
-            }
-          }
+                flake8 = { enabled = false },
+              },
+            },
+          },
         },
-
-        clangd = {},
       }
 
       -- 手动配置 clangd
       require('mason').setup()
+      require('lspconfig').pylsp.setup(servers.pylsp)
       require'lspconfig'.clangd.setup{}
       -- local ensure_installed = vim.tbl_keys(servers or {})
       -- vim.list_extend(ensure_installed, {
@@ -160,7 +153,7 @@ return {
 
       require('mason-lspconfig').setup({
         ensure_installed = {
-          'lua_ls'
+          'lua_ls',
         },
         handlers = {
           function(server_name)

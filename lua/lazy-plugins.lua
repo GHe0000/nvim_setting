@@ -28,6 +28,8 @@ require("lazy").setup({
 
 	require("plugins.cmp"),
 
+  -- require("plugins.swenv"),
+
 	-- 自动输入法切换
 	require("plugins.neuims"),
 
