@@ -10,6 +10,15 @@ return {
       { 'folke/neodev.nvim', opts = {} }, -- LuaLSP 增强
     },
     config = function()
+      -- 设置显示/隐藏提示弹窗
+      local show_diagnostic_popup_on_hover = true
+      vim.keymap.set('n', '<leader>tp', function()
+        show_diagnostic_popup_on_hover = not show_diagnostic_popup_on_hover
+        if not show_diagnostic_popup_on_hover then
+          vim.diagnostic.hide()
+        end
+      end, { desc = '[T]oggle Diagnostic [P]opup' })
+
       -- 设置语法警告信息显示内容 
       vim.diagnostic.config({
         virtual_text = false,
@@ -24,7 +33,9 @@ return {
       vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
         group = vim.api.nvim_create_augroup("float_diagnostic", { clear = true }),
         callback = function ()
-          vim.diagnostic.open_float(nil, {focus=false})
+          if show_diagnostic_popup_on_hover then
+            vim.diagnostic.open_float(nil, {focus=false})
+          end
         end
       })
 
@@ -35,6 +46,9 @@ return {
           local map = function(keys, func, desc)
             vim.keymap.set('n', keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
           end
+
+          -- lsp_signature
+          -- map('<leader>ts', vim.lsp.buf.signature_help, '[T]oggle [S]ignature')
 
           -- Jump to the definition of the word under your cursor.
           --  This is where a variable was first declared, or where a function is defined, etc.
