@@ -170,6 +170,8 @@ return {
 				},
 			}
 			require("mason").setup()
+      -- 手动设置 pylsp 
+      require('lspconfig').pylsp.setup(servers.pylsp)
 			-- local ensure_installed = vim.tbl_keys(servers or {})
 			-- vim.list_extend(ensure_installed, {
 			-- 	"stylua",
